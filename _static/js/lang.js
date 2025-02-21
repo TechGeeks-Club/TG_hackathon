@@ -1,19 +1,34 @@
+// document.addEventListener('click', function(event) {
+//     if (event.target.classList.contains('lang')) {
+//         console.log('click');
+//         changeLanguageLink();
+//     }
+// });
+
 document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('lang')) {
-        console.log('click');
+    // Check if the clicked target is a <p> within a <div> of class 'lang'
+    console.log('click');
+    if (event.target.closest('.lang')) {
         changeLanguageLink();
     }
 });
 
 function changeLanguageLink() {
     let link = window.location.href;
-    let new_link = link;
-    if (link.includes('/Ar/')) {
-        console.log(link.replace('/Ar/', '/En/'));
-        window.open(new_link);
-    } else {
-        console.log(link.replace(/\/[^\/]*\//, '/En/'));
-        window.open(new_link);
+    console.log(link);
+    let new_link = "";
+    if (link.includes('/En/')) {
+        console.log('en');
+
+        new_link = link.replace('/En/', '/Ar/');
+        window.open(new_link,'_self');
+    } else if (link.includes('/Ar/')) {
+        console.log('ar');
+        new_link = link.replace('/Ar/', '/En/');
+        window.open(new_link,'_self');
     }
-   
+   else{
+    console.log('no');
+     return;
+   }
 }
