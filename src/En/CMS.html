@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CMS &#8212; TG-hackathon</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'src/En/CMS';</script>
+    <script src="../../_static/js/lang.js?v=a9b36ae9"></script>
+    <link rel="icon" href="../../_static/Logo_01.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The Business Name Generator" href="BusinessNameGenerator.html" />
+    <link rel="prev" title="CV Generator" href="Creation_Cv.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Logo_03.png" class="logo__image only-light" alt="TG-hackathon - Home"/>
+    <script>document.write(`<img src="../../_static/Logo_03.png" class="logo__image only-dark" alt="TG-hackathon - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">TG Terms of Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Health_Medication_Management.html">Health Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lost_Found_App.html">Lost &amp; Found App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Creation_Cv.html">CV Generator</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BusinessNameGenerator.html">The Business Name Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TO_DO_List.html">Online To-Do List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Event_lending_page.html">Event Landing Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Portfolio_page.html">Portfolio</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/TechGeeks-Club/TG_hackathon" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TechGeeks-Club/TG_hackathon/issues/new?title=Issue%20on%20page%20%2Fsrc/En/CMS.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/src/En/CMS.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CMS</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-project-overview">1. Introduction - Project Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-management">- Access management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backend-server-setup">- Backend server setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database-implementation">- Database implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-security-system-design">- Data security system design</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#target-audience">2.Target Audience :</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blogs">Blogs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-platforms">Publishing platforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-corporate-systems">Internal corporate systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-roles-permissions">User Roles &amp; Permissions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-functionalities">3. Main Functionalities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-authentication-management">3.1. User Authentication &amp; Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#content-management-crud-operations">3.2. Content Management (CRUD Operations)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-data-protection">3.3. Security &amp; Data Protection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">4. Deliverables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">- Key features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-encountered">- Challenges encountered</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-requirements">5. Technical Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#language-framework">1. Language &amp; Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database">2. Database</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-security">3. Authentication &amp; Security</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cms">
+<h1>CMS<a class="headerlink" href="#cms" title="Link to this heading">#</a></h1>
+<p>Secure Content Management System with Multiple Users and Distinct Roles</p>
+<hr class="docutils" />
+<div class="sd-sphinx-override sd-btn sd-text-wrap lang docutils">
+<p>Change language</p>
+</div>
+<section id="introduction-project-overview">
+<h2>1. Introduction - Project Overview<a class="headerlink" href="#introduction-project-overview" title="Link to this heading">#</a></h2>
+<p>This project aims to develop a secure content management system (CMS) that enables
+different types of users (administrators, editors, and visitors) to interact with content based
+on their respective roles and permissions.</p>
+<p>The key objective is to implement a REST API that:</p>
+<ul class="simple">
+<li><p>Manages user authentication via JWT (JSON Web Token).</p></li>
+<li><p>Basic content management (CRUD operations)</p></li>
+<li><p>Role-based access control (Admin, Editor, Visitor)</p></li>
+</ul>
+<p>Through this project, developers will gain hands-on experience with:</p>
+<section id="access-management">
+<h3>- Access management<a class="headerlink" href="#access-management" title="Link to this heading">#</a></h3>
+</section>
+<section id="backend-server-setup">
+<h3>- Backend server setup<a class="headerlink" href="#backend-server-setup" title="Link to this heading">#</a></h3>
+</section>
+<section id="database-implementation">
+<h3>- Database implementation<a class="headerlink" href="#database-implementation" title="Link to this heading">#</a></h3>
+</section>
+<section id="data-security-system-design">
+<h3>- Data security system design<a class="headerlink" href="#data-security-system-design" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="target-audience">
+<h2>2.Target Audience :<a class="headerlink" href="#target-audience" title="Link to this heading">#</a></h2>
+<p>The CMS is designed for platforms that require hierarchical content management with
+distinct levels of access. This system can be used in:</p>
+<section id="blogs">
+<h3>Blogs<a class="headerlink" href="#blogs" title="Link to this heading">#</a></h3>
+</section>
+<section id="publishing-platforms">
+<h3>Publishing platforms<a class="headerlink" href="#publishing-platforms" title="Link to this heading">#</a></h3>
+</section>
+<section id="internal-corporate-systems">
+<h3>Internal corporate systems<a class="headerlink" href="#internal-corporate-systems" title="Link to this heading">#</a></h3>
+</section>
+<section id="user-roles-permissions">
+<h3>User Roles &amp; Permissions<a class="headerlink" href="#user-roles-permissions" title="Link to this heading">#</a></h3>
+<p>1- Administrators Have full system control, including user and content management.</p>
+<p>2- Editors Can create and modify content.</p>
+<p>3- Visitors Can only view content.</p>
+</section>
+</section>
+<section id="main-functionalities">
+<h2>3. Main Functionalities<a class="headerlink" href="#main-functionalities" title="Link to this heading">#</a></h2>
+<section id="user-authentication-management">
+<h3>3.1. User Authentication &amp; Management<a class="headerlink" href="#user-authentication-management" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Simple user registration &amp; login (email &amp; password).</p></li>
+<li><p>JWT-based authentication with role-based access control.</p></li>
+<li><p>Users stored in a JSON file (instead of a full database) to save time.</p></li>
+</ul>
+</section>
+<section id="content-management-crud-operations">
+<h3>3.2. Content Management (CRUD Operations)<a class="headerlink" href="#content-management-crud-operations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Admin &amp; Editor Can create, edit, delete, and view content.</p></li>
+<li><p>Visitors Can only view content.</p></li>
+<li><p>Content stored in a JSON file (instead of a database) to simplify development.</p></li>
+</ul>
+</section>
+<section id="security-data-protection">
+<h3>3.3. Security &amp; Data Protection<a class="headerlink" href="#security-data-protection" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>JWT authentication to protect API routes.</p></li>
+<li><p>Hashed passwords for security.</p></li>
+<li><p>Basic role-based access control enforced at the API level.</p></li>
+</ul>
+</section>
+</section>
+<section id="deliverables">
+<h2>4. Deliverables<a class="headerlink" href="#deliverables" title="Link to this heading">#</a></h2>
+<p>At the end of the project, the team will provide:</p>
+<p>1-<strong>A functional REST API</strong> with authentication and content management.</p>
+<p>2- The source code with comments included.</p>
+<p><strong>3- Technical documentation</strong> covering:</p>
+<p><strong>- System architecture</strong></p>
+<p><strong>- API routes</strong></p>
+<p><strong>- Data models</strong></p>
+<p><strong>4- A final report detailing:</strong> (a short README file explaining the project)</p>
+<p><strong>-Project design</strong>
+<strong>-Technical choices</strong></p>
+<p><strong>5- A presentation pitch</strong> summarizing the project, including:</p>
+<section id="key-features">
+<h3>- Key features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h3>
+</section>
+<section id="challenges-encountered">
+<h3>- Challenges encountered<a class="headerlink" href="#challenges-encountered" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="technical-requirements">
+<h2>5. Technical Requirements<a class="headerlink" href="#technical-requirements" title="Link to this heading">#</a></h2>
+<section id="language-framework">
+<h3>1. Language &amp; Framework<a class="headerlink" href="#language-framework" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use <strong>Node.js</strong> with <strong>Express</strong> for backend development.</p></li>
+</ul>
+</section>
+<section id="database">
+<h3>2. Database<a class="headerlink" href="#database" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use <strong>MongoDB</strong> (preferably <strong>MongoDB Atlas</strong> for an easy online setup).</p></li>
+<li><p>Utilize <strong>Mongoose</strong> to interact with the database.</p></li>
+<li><p>simpler choice : Use <strong>a JSON file</strong> instead of a database to store users and content</p></li>
+</ul>
+</section>
+<section id="authentication-security">
+<h3>3. Authentication &amp; Security<a class="headerlink" href="#authentication-security" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use <strong>JWT (JSON Web Token)</strong> for authentication.</p></li>
+<li><p>Store JWT securely and verify user roles before accessing certain endpoints.</p></li>
+</ul>
+<p><strong>4. Content Management</strong></p>
+<ul class="simple">
+<li><p><strong>Administrators:</strong> Full control (manage users and content).</p></li>
+<li><p><strong>Editors:</strong> Can create and modify content.</p></li>
+<li><p><strong>Visitors:</strong> Can only view content.</p></li>
+</ul>
+<p><strong>-5. Deployment</strong></p>
+<ul class="simple">
+<li><p><strong>Run the API locally</strong> on your machines using-:</p></li>
+<li><p><strong>Node.js</strong> (for the backend)-</p></li>
+<li><p><strong>MongoDB</strong> (either local or MongoDB Atlas for cloud storage).</p></li>
+</ul>
+<p><strong>-6. Testing</strong></p>
+<p>Validate API requests (use <strong>Postman</strong> to manually test API endpoints)</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./src/En"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Creation_Cv.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CV Generator</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="BusinessNameGenerator.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Business Name Generator</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-project-overview">1. Introduction - Project Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-management">- Access management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backend-server-setup">- Backend server setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database-implementation">- Database implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-security-system-design">- Data security system design</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#target-audience">2.Target Audience :</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blogs">Blogs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-platforms">Publishing platforms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-corporate-systems">Internal corporate systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-roles-permissions">User Roles &amp; Permissions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-functionalities">3. Main Functionalities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-authentication-management">3.1. User Authentication &amp; Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#content-management-crud-operations">3.2. Content Management (CRUD Operations)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-data-protection">3.3. Security &amp; Data Protection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">4. Deliverables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">- Key features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-encountered">- Challenges encountered</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-requirements">5. Technical Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#language-framework">1. Language &amp; Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database">2. Database</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-security">3. Authentication &amp; Security</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By TechGeeks
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
