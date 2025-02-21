@@ -1,0 +1,29 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: EN\Health_Medication_Management.ipynb
+- file: EN\Lost_Found_App.ipynb
+- file: EN\Creation_Cv.ipynb
+- file: EN\CMS.ipynb
+- file: EN\BusinessNameGenerator.ipynb
+- file: EN\TO_DO_List.ipynb
+- file: EN\Event_lending_page.ipynb
+- file: EN\Portfolio_page.ipynb
+- file: EN\Restaurant_lending_page.ipynb
+
+
+
+- file: Ar\Health_Medication_ManagementAr.ipynb
+- file: Ar\Lost_Found_AppAr.ipynb
+- file: Ar/Creation_CvAr.ipynb
+- file: Ar\CMSAr.ipynb
+# Todo list 
+# busness ..
+- file: Ar\Event_lending_pageAr.ipynb
+- file: Ar\Portfolio_pageAr.ipynb
+- file: Ar\Restaurant_lending_pageAr.ipynb
+
+
