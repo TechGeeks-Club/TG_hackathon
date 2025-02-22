@@ -16,7 +16,7 @@ parts:
     - file: src/En/TO_DO_List.ipynb
     - file: src/En/Event_lending_page.ipynb
     - file: src/En/Portfolio_page.ipynb
-    - file: src/En/Restaurant_lending_page.ipynbn
+    - file: src/En/Restaurant_lending_page.ipynb
 
 # - file: Ar\Health_Medication_ManagementAr.ipynb
 # - file: Ar\Lost_Found_AppAr.ipynb
